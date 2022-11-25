@@ -16,6 +16,7 @@ const Barcode = ({
   style,
   onError,
   maxWidth,
+  getRef
 }) => {
   const drawRect = (x, y, width, height) => {
     return `M${x},${y}h${width}v${height}h-${width}z`;
@@ -112,7 +113,7 @@ const Barcode = ({
     <View
       style={[{ backgroundColor: background, alignItems: 'center' }, style]}
     >
-      <Svg height={height} width={barCodeWidth} fill={lineColor}>
+      <Svg height={height} width={barCodeWidth} fill={lineColor} ref={gerRef}>
         <Path d={bars.join(' ')} />
       </Svg>
       {text && <Text style={[{ textAlign: 'center' }, textStyle]}>{text}</Text>}
