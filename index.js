@@ -113,7 +113,7 @@ const Barcode = ({
     <View
       style={[{ backgroundColor: background, alignItems: 'center' }, style]}
     >
-      <Svg height={height} width={barCodeWidth} fill={lineColor} ref={gerRef}>
+      <Svg height={height} width={barCodeWidth} fill={lineColor} ref={getRef}>
         <Path d={bars.join(' ')} />
       </Svg>
       {text && <Text style={[{ textAlign: 'center' }, textStyle]}>{text}</Text>}
